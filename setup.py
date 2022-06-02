@@ -17,7 +17,7 @@ if os.path.isfile(requirementPath):
 print(install_requires)
 setup(
     name='twitter_scraper_without_api',
-    version='0.0.4',
+    version='0.0.5',
     license='',
     author='Hamed',
     author_email='hamed.minaei@gmail.com',

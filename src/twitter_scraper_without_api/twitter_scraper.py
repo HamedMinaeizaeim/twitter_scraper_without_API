@@ -178,6 +178,7 @@ class TwitterScrapper:
             all_ready_fetched_posts.extend(present_tweets)
             if self.__check_retry() is True:
                break
+        self.driver.quit()
 
     def store_data(self, format='Json'):
         if format.lower()=='json':
