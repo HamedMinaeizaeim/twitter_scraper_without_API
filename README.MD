@@ -1,5 +1,5 @@
 <h1> Twitter scraper selenium </h1>
-<p> Python's package to scrap Twitter's front-end easily with selenium.  </p>
+<p> Python's package to scrape Twitter's front-end easily with selenium.  </p>
 
 
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://opensource.org/licenses/MIT) [![Python >=3.6.9](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/release/python-360/)
@@ -7,7 +7,7 @@
 
 # Twitter_scraper_without_API
 
-this codes were developed to extract information from the twitter without using API as there are a limitation and costs for using official twitter API. yu can extract based on your keyword and time frame (in minutes). you can extract unlimitted number of twittes. 
+This code was developed to extract information from twitter without using API as there are a limitation and costs for using official twitter API. You can extract based on your keyword and time frame (in minutes). You can extract unlimitted number of tweets. 
 
 
 ## Pre-requests
@@ -40,16 +40,16 @@ alternatively, you can in stall using **PyPl** :
 
 ## How to use 
 
-to use this library, you just need to import the TwitterScrapper scrapper class and then specify your keyword search. By default, it will return all twitter within a minute. you can change it to extract twitts in the last n minutes. Here is a code to do that: 
+To use this library, you just need to import the TwitterScraper scraper class and then specify your keyword search. By default, it will return all tweets within a minute. You can change it to extract tweets in the last n minutes. Here is a code to do that: 
 
-     from src.twitter_scraper import TwitterScrapper
-     twitter = TwitterScrapper('bitcoin')
+     from src.twitter_scraper import TwitterScraper
+     twitter = TwitterScraper('bitcoin')
      twitter.last_n_mins = 3
      twitter.fetch_data()
 
 ## Export option
 
-you can export data as json, panda (Dataframe) and csv
+You can export data as json, panda (Dataframe) and csv
 
     df = twitter.store_data('dataFrame')
     csv = twitter.store_data('csv')
@@ -58,4 +58,4 @@ you can export data as json, panda (Dataframe) and csv
 
 ## Privacy
 
-there is no issue with privacy in this library and search is based on publicly avaialble information 
+There is no issue with privacy in this library and search is based on publicly avaialble information 
