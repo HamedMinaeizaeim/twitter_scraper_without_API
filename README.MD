@@ -28,7 +28,7 @@ you can install from source code using
    
 
     pip install -r requirements.txt
-alternatively, you can in stall using **PyPl** : 
+alternatively, you can install using **PyPl** : 
 
    
 
@@ -42,7 +42,7 @@ alternatively, you can in stall using **PyPl** :
 
 To use this library, you just need to import the TwitterScraper scraper class and then specify your keyword search. By default, it will return all tweets within a minute. You can change it to extract tweets in the last n minutes. Here is a code to do that: 
 
-     from src.twitter_scraper import TwitterScraper
+     from src.twitter_scraper_without_api import TwitterScraper
      twitter = TwitterScraper('bitcoin')
      twitter.last_n_mins = 3
      twitter.fetch_data()
