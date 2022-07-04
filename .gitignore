@@ -1,0 +1,3 @@
+firefox-geckodriver/*
+geckodriver.log
+src/twitter_scraper_without_api/__pycache__/*
