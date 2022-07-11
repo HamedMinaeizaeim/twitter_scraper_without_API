@@ -24,7 +24,7 @@ from .driver_utils import Utilities
 import re, json, os, csv
 import dateutil
 
-class TwitterScrapper:
+class TwitterScraper:
     
     def __init__(self, keyword):
         self.keyword = keyword
@@ -38,7 +38,7 @@ class TwitterScrapper:
         self._last_n_mins = 1
 
     def __repr__(self):
-        return "TwitterScrapper('bitcoin', 60 )"
+        return "TwitterScraper('bitcoin', 60 )"
 
     def __str__(self):
         return ""
@@ -104,7 +104,7 @@ class TwitterScrapper:
         status = status[-1]
         is_retweet = Finder._Finder__is_retweet(tweet)
         posted_time = Finder._Finder__find_timestamp(tweet)
-        posted_time = TwitterScrapper.str_to_datetime(posted_time)
+        posted_time = TwitterScraper.str_to_datetime(posted_time)
         content = Finder._Finder__find_content(tweet)
         likes = Finder._Finder__find_like(tweet)
         images = Finder._Finder__find_images(tweet)
@@ -184,9 +184,9 @@ class TwitterScrapper:
         if format.lower()=='json':
             return self.data
         elif format.lower()=='dataframe':
-            return TwitterScrapper.convert_json_to_dataframe(self.data)
+            return TwitterScraper.convert_json_to_dataframe(self.data)
         elif format.lower()=='csv':
-            df = TwitterScrapper.convert_json_to_dataframe(self.data)
+            df = TwitterScraper.convert_json_to_dataframe(self.data)
             return df.to_csv()
         else:
             print("it dose not sopport that format")
