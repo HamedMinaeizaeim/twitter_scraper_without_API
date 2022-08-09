@@ -48,6 +48,7 @@ from twitter_scraper_without_api import TwitterScraper
 twitter = TwitterScraper('bitcoin')
 twitter.last_n_mins = 3
 twitter.fetch_data()
+twitter.store_data()
 ```
 
 ## Export option
