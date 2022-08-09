@@ -16,24 +16,25 @@ This code was developed to extract information from twitter without using API as
  - Browsers(Firefox)
 
 ## Instalation 
-
-you can install from source code using 
-
-    git clone https://github.com/HamedMinaeizaeim/twitter_scraper_without_API.git
- and then run 
- 
-
-    Python setup.py install 
-   or you can run 
-   
-
-    pip install -r requirements.txt
-alternatively, you can install using **PyPl** : 
+install using **PyPl** : 
 
    
 
      pip install twitter_scraper_without_API
     
+---
+
+alternatively, you can install from source code using 
+
+    git clone https://github.com/HamedMinaeizaeim/twitter_scraper_without_API.git
+ and then run 
+ 
+
+    python setup.py install 
+   or you can run 
+   
+
+    pip install -r requirements.txt
 
 
 
@@ -42,19 +43,22 @@ alternatively, you can install using **PyPl** :
 
 To use this library, you just need to import the TwitterScraper scraper class and then specify your keyword search. By default, it will return all tweets within a minute. You can change it to extract tweets in the last n minutes. Here is a code to do that: 
 
-     from src.twitter_scraper_without_api import TwitterScraper
-     twitter = TwitterScraper('bitcoin')
-     twitter.last_n_mins = 3
-     twitter.fetch_data()
+```py
+from twitter_scraper_without_api import TwitterScraper
+twitter = TwitterScraper('bitcoin')
+twitter.last_n_mins = 3
+twitter.fetch_data()
+```
 
 ## Export option
 
 You can export data as json, panda (Dataframe) and csv
 
-    df = twitter.store_data('dataFrame')
-    csv = twitter.store_data('csv')
-    json = twitter.store_data('json')
-
+```py
+df = twitter.store_data('dataFrame')
+csv = twitter.store_data('csv')
+json = twitter.store_data('json')
+```
 
 ## Privacy
 
